@@ -7,7 +7,7 @@
 
 Once installed you will need to add the following code  to `ConfigureServices` and `Configure` in your `Startup.cs` file.
 
-This installs the the default service and options.
+This installs the the default service and options. **Be sure to call `UseImageSharp` before the call to `UseStaticFiles` if you're using the static file middleware or else files will be processed by that middleware instead.**
 
 ``` c#
 public void ConfigureServices(IServiceCollection services) {
